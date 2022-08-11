@@ -64,6 +64,26 @@ const AudioPlayer = ({ tracks }) => {
     }
   };
 
+  function getRandomInt(max, min) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
+
+  const shuffe = () => {
+    const current = trackIndex
+    // console.log(trackIndex)
+    const random = getRandomInt(tracks.length,0)
+    if (random==current){
+      shuffe();
+    }
+    if (trackIndex < tracks.length - 1) {
+      setTrackIndex(random);
+    } else {
+      setTrackIndex(0);
+    }
+  };
+
   const toNextTrack = () => {
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
@@ -71,7 +91,6 @@ const AudioPlayer = ({ tracks }) => {
       setTrackIndex(0);
     }
   };
-
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
@@ -121,6 +140,7 @@ const AudioPlayer = ({ tracks }) => {
           onPrevClick={toPrevTrack}
           onNextClick={toNextTrack}
           onPlayPauseClick={setIsPlaying}
+          onShuffleClick={shuffe}
         />
         <input
           type="range"

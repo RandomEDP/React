@@ -3,14 +3,25 @@ import { ReactComponent as Play } from "./assets/play.svg";
 import { ReactComponent as Pause } from "./assets/pause.svg";
 import { ReactComponent as Next } from "./assets/next.svg";
 import { ReactComponent as Prev } from "./assets/prev.svg";
+import { ReactComponent as Shuffle } from "./assets/shuffle.svg";
+
 
 const AudioControls = ({
   isPlaying,
   onPlayPauseClick,
   onPrevClick,
-  onNextClick
+  onNextClick,
+  onShuffleClick
 }) => (
   <div className="audio-controls">
+        <button
+      type="button"
+      className="shuffle"
+      aria-label="shuffle"
+      onClick={onShuffleClick}
+    >
+      <Shuffle />
+    </button>
     <button
       type="button"
       className="prev"
