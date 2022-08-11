@@ -6,8 +6,8 @@ ReactMusicPlayer is a React Music Player
 
 Clone the project onto your local machine then in CMD not powershell
 
-'''bash
+```bash
 npm run build
 serve -s build
-'''
+```
 
