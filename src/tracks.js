@@ -1,9 +1,9 @@
 import imgSrc from "./assets/artwork.jpg";
 import imgSrc2 from "./assets/artwork2.jpg";
 import imgSrc3 from "./assets/artwork3.jpg";
-import AJRIWont from "./assets/AJRIWON'T.mp3";
-import WorldsmallestViolin from "./assets/AJR-World's-Smallest-Violin.mp3";
-import Bang from "./assets/BANG.mp3";
+import AJRIWont from "./assets/iwont.mp3";
+import WorldsmallestViolin from "./assets/worlds.mp3";
+import Bang from "./assets/bang.mp3";
 
 export default [
   {
