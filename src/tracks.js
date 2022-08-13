@@ -18,13 +18,14 @@ export default [
     artist: "AJR",
     audioSrc: WorldsmallestViolin,
     image: imgSrc2,
-    color: "#00aeb0"
+    color: "#ec3a84"
   },
   {
     title: "Bang!",
     artist: "AJR",
     audioSrc: Bang,
     image: imgSrc3,
-    color: "#00aeb0"
+    color: "#f24a16"
   },
+
 ];
